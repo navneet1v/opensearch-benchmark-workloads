@@ -9,6 +9,14 @@
     ]
 },
 {
+    "name": "index-only-large-data",
+    "description": "Index vector dataset 100 times",
+    "default": false,
+    "schedule": [
+       {{ benchmark.collect(parts="common/index-only-100-schedule.json") }}
+    ]
+},
+{
     "name": "no-train-test-index-only",
     "description": "Perform only indexing operation for vector search",
     "default": false,
