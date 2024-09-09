@@ -1,20 +1,5 @@
 {
     "operation": {
-        "name": "delete-target-index",
-        "operation-type": "delete-index",
-        "only-if-exists": true,
-        "index": "{{ target_index_name | default('target_index') }}"
-    }
-},
-{
-    "operation": {
-        "name": "create-target-index",
-        "operation-type": "create-index",
-        "index": "{{ target_index_name | default('target_index') }}"
-    }
-},
-{
-    "operation": {
         "name": "custom-vector-bulk",
         "operation-type": "bulk-vector-data-set",
         "index": "{{ target_index_name | default('target_index') }}",
@@ -26,7 +11,6 @@
         "num_vectors": {{ target_index_num_vectors | default(-1) }},
         "id-field-name": "{{ id_field_name }}"
     },
-    "iterations": {{ index_iterations | default(1)}},
     "clients": {{ target_index_bulk_indexing_clients | default(1)}}
 },
 {
