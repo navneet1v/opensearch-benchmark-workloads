@@ -11,7 +11,6 @@
       }
     },
     "mappings": {
-      "dynamic": "strict",
       "properties": {
         {% if id_field_name is defined and id_field_name != "_id" %}
           "{{id_field_name}}": {
