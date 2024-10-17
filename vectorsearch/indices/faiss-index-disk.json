@@ -19,9 +19,9 @@
         {%- endif %}
         "target_field": {
           "type": "knn_vector",
-          "mode": "on_disk",
-          "compression": "32x",
           "dimension": {{ target_index_dimension }},
+          "mode": "on_disk",
+          "compression_level": "32x",
           {%- if train_model_id is defined %}
           "model_id": "{{ train_model_id }}"
           {%- else %}
